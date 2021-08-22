@@ -7,6 +7,10 @@ GraphQL Relay Demo Todo App
 yarn create react-app graphql-relay-demo
 ```
 
+```
+yarn start
+```
+
 # References
 
 - [Step-by-step Guide](https://relay.dev/docs/getting-started/step-by-step-guide/)
