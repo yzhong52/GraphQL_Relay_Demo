@@ -11,6 +11,31 @@ yarn create react-app graphql-relay-demo
 yarn start
 ```
 
+## Configure Relay Compiler
+
+Placeholder graphql schema file:
+```
+cd graphql-relay-demo
+curl https://raw.githubusercontent.com/relayjs/relay-examples/main/issue-tracker/schema/schema.graphql > schema.graphql
+```
+
+Update scripts:
+
+```
+// your-app-name/package.json
+{
+  ...
+  "scripts": {
+    ...
+    "start": "yarn run relay && react-scripts start",
+    "build": "yarn run relay && react-scripts build",
+    "relay": "yarn run relay-compiler --schema schema.graphql --src ./src/ --watchman false $@"
+    ...
+  },
+  ...
+}
+```
+
 # References
 
 - [Step-by-step Guide](https://relay.dev/docs/getting-started/step-by-step-guide/)
